@@ -1,0 +1,12 @@
+// Problem : Excel Column Number
+// Link : https://www.interviewbit.com/problems/excel-column-number/
+
+int Solution::titleToNumber(string A) {
+    int len = A.length();
+    long long int base=1, res=0;
+    for(int i=len-1;i>=0;i--){
+        res+=(A[i]-'A'+1)*base;
+        base*=26;
+    }
+    return res;
+}
