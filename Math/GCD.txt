@@ -1,0 +1,6 @@
+// Problem : Greatest Common Divisor
+// Link : https://www.interviewbit.com/problems/greatest-common-divisor/
+
+int Solution::gcd(int A, int B) {
+    return !B ? A : gcd(B,A%B);
+}
