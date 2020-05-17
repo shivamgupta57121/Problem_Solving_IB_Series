@@ -1,0 +1,17 @@
+// Problem : Sum of pairwise Hamming Distance
+// Link : https://www.interviewbit.com/problems/sum-of-pairwise-hamming-distance/
+
+int Solution::hammingDistance(const vector<int> &A) {
+    int hamingDistance=0;
+    int n = A.size();
+    for(int i=0;i<32;i++){
+        int setCountBitsI=0,unsetCountBitsI=0;
+        for(int j=0;j<n;j++){
+            if(A[j]&(1<<i)) setCountBitsI++;
+            else unsetCountBitsI++;
+        }
+        hamingDistance += (2L*(long)setCountBitsI * (long)unsetCountBitsI)%1000000007;
+        hamingDistance %= 1000000007;
+    }
+    return hamingDistance;
+}
