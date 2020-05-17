@@ -1,0 +1,13 @@
+// Problem : Trailing zeros in Factorial
+// Link : https://www.interviewbit.com/problems/trailing-zeros-in-factorial/
+
+int Solution::trailingZeroes(int A) {
+    long long int count=0;
+    long long B=5;
+    while(A/B){
+        count+=(A/B);
+        B*=5;
+        
+    }
+    return count;
+}
