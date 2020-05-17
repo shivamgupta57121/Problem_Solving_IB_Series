@@ -1,0 +1,19 @@
+// Problem : Palindrome Integer
+// Link : https://www.interviewbit.com/problems/palindrome-integer/
+
+int Solution::isPalindrome(int A) {
+    if(A<0) return 0;
+    long long int n=A;
+    int len=1;
+    while(A/len>=10){
+        len*=10;
+    }
+    while(n!=0){
+        
+        if(n/len!=n%10) return false;
+        
+        n = (n % len) / 10; 
+        len/=100;
+    }
+    return 1;
+}
