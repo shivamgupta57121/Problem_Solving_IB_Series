@@ -1,9 +1,9 @@
 // Problem : Max Distance
-// Link : 
+// Link : interviewbit.com/problems/max-distance/
 
-// Solution : interviewbit.com/problems/max-distance/
+// Solution : 
 
-// Brute Force (Will reward partial points)
+// Brute Force (Will reward partial points) O(N*N)
 int Solution::maximumGap(const vector<int> &A) {
     int n = A.size();
     int m=0;
@@ -14,3 +14,4 @@ int Solution::maximumGap(const vector<int> &A) {
     }
     return m;
 }
+
